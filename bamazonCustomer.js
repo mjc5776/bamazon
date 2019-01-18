@@ -69,10 +69,10 @@ function productToBuy() {
             }, function (err, res) {
                 
                 if (res[0].stock_quantity < answer.qty) {
-                    console.log("Insufficient Quantity");
+                    console.log("Insufficient quantity!");
                     listProducts();
                 } else {
-                    
+                 
                     connection.query("UPDATE products SET ? WHERE ?",
                         [
                             {
