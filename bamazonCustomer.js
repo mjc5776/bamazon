@@ -1,6 +1,7 @@
 var inquirer = require("inquirer");
 var mysql = require("mysql");
-var Table = require("easy-table")
+var Table = require("easy-table");
+var figlet = require('figlet');
 var connection = mysql.createConnection({
     host: "localhost",
     port: 8889,
@@ -9,7 +10,6 @@ var connection = mysql.createConnection({
     database: "bamazon"
 });
 
-
 listProducts();
 
 function listProducts() {
@@ -17,7 +17,6 @@ function listProducts() {
     connection.query(queryStr, function (err, results) {
         if (err) throw err;
         console.log("\n\n");
-        console.log('BAMAZON');
 
         var t = new Table;
 
@@ -29,8 +28,10 @@ function listProducts() {
             t.cell('Qty', product.stock_quantity);
             t.newRow();
         });
+        
         console.log(t.toString());
         productToBuy();
+        
     });
 
 };
@@ -87,8 +88,8 @@ function productToBuy() {
                             if (error) throw err;
                             var orderTotal = (answer.qty * res[0].price)
                             console.log("Order Complete. Your total is: $" + orderTotal);
-                            
-                            closeConnection();
+                            listProducts()
+                            //closeConnection();
                         }
                     )   
                     

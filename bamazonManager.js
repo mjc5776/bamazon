@@ -62,7 +62,8 @@ function viewProducts() {
             t.newRow();
         });
         console.log(t.toString());
-
+        console.log("\n\n");
+        menuOptions();
     });
 
 };
@@ -88,7 +89,7 @@ function viewLowInventory() {
             t.newRow();
         });
         console.log(t.toString());
-        
+        menuOptions();
     });
     
 };
@@ -123,7 +124,6 @@ function addInventory() {
             });
             console.log("Inventory updated successfully.");
             menuOptions();
-
         });
 
 };
@@ -173,7 +173,7 @@ function addProducts() {
             function(err) {
                 if (err) throw err;
                 console.log("New product added successfully.");
-
+                menuOptions();
             });
 
         });
