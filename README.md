@@ -15,18 +15,19 @@ BAMAZON is an Amazon-like store fron with a MySQL database backend.The Customer 
 ![Alt text](/images/OrderComplete.jpg?raw=true "Units to buy")
 
 - #### Insufficient quantityt
-![Alt text](/images/InsufficientQty.jpg?raw=true "Units to buy")
+![Alt text](/images/InsufficientQty.jpg?raw=true "Insufficient Qty")
 
 ## Manager App 
 - #### View Products for Sale
-
+![Alt text](/images/ManagerViewProducts.jpg?raw=true "View Products For Sale")
 
 - #### View Low Inventory
+![Alt text](/images/ManagerLowInventory.jpg?raw=true "View Low Inventory")
+
+- #### Increase Inventory Quantity
+![Alt text](/images/ManagerAddProduct.jpg?raw=true "Increase Inventory Quantity")
 
 
-
-- #### Add to Inventory
-
-
-
-- #### Add New Product
+- #### Add A New Product
+![Alt text](/images/ManagerInvNewProduct.jpg?raw=true "Add a new product ")
+![Alt text](/images/ManagerUpdateInventory.jpg?raw=true "Inventory updated with new product")
